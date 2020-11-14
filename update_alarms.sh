@@ -1,9 +1,13 @@
 ##El siguiente script es con el fin de automatizar el proceso de creaci�n de alarmas en las instancias EC2
-##1-Variables ATENCION  estos valores se deben remplazar por los valores correctos, depende del cliente o proyecto al cual lo estemos aplicando
+##1-Variables ATENCION  estos valores se deben ingresar por los valores correctos, depende del cliente o proyecto al cual lo estemos aplicando
 PROJECT=""
 ARN_EMAIL=""
 ARN_SLACK_OK=""
 ARN_SLACK_ALARM=""
+read -p "Ingresar el nombre de prueba o proyecto o empresa" PROJECT
+read -p "Ingresar el ARN de la SNS de correo" PROJECT
+read -p "Ingresar el ARN de la SNS de envio de notificacion a slack en estado OK" ARN_SLACK_OK
+read -p "Ingresar el ARN de la SNS de envio de notificacion a slack en estado OK" ARN_SLACK_ALARM
 
 ##2-Variables-Metadata EC2, en esta secci�n se captura los metadatos de la instancia
 ASG_NAME=$(aws autoscaling describe-auto-scaling-instances --instance-ids `curl --silent http://169.254.169.254/latest/meta-data/instance-id 2>&1` | grep AutoScalingGroupName | sed 's/ //g' | sed 's/"//g' | sed 's/^.\{,21\}//' | sed 's/,//g')
