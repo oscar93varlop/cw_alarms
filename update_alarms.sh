@@ -5,7 +5,7 @@ ARN_EMAIL=""
 ARN_SLACK_OK=""
 ARN_SLACK_ALARM=""
 read -p "Ingresar el nombre de prueba o proyecto o empresa" PROJECT
-read -p "Ingresar el ARN de la SNS de correo" PROJECT
+read -p "Ingresar el ARN de la SNS de correo" ARN_EMAIL
 read -p "Ingresar el ARN de la SNS de envio de notificacion a slack en estado OK" ARN_SLACK_OK
 read -p "Ingresar el ARN de la SNS de envio de notificacion a slack en estado OK" ARN_SLACK_ALARM
 
