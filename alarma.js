@@ -2,7 +2,7 @@ console.log('Loading function');
 
 const https = require('https');
 const url = require('url');
-const slack_url = 'https://hooks.slack.com/services/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';
+const slack_url = '#ingresar el link del webhook de slack#';
 const slack_req_opts = url.parse(slack_url);
 slack_req_opts.method = 'POST';
 slack_req_opts.headers = {
