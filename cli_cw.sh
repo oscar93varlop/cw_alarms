@@ -62,14 +62,14 @@ do
    echo "              MENU PRINCIPAL               "
    echo "___________________________________________"
    echo "1. Instalación agente CW | creación de alarmas CPU/MEM/DISK dist deb   "
-   echo "1. Instalación agente CW | creación de alarmas CPU/MEM/DISK dist rh   "
+   echo "2. Instalación agente CW | creación de alarmas CPU/MEM/DISK dist rh   "
    echo "0. Salir"
 
    # leer los datos del usuario
-   read -n1 -p "Ingrese una opción [0-2]" opcion
+   read -n1 -p "Ingrese una opción [0-2]" option
 
   # validar la opcion de ingresada
-  case $opcion in
+  case $option in
   1)
      echo -e  "\n Iniciando..."
      cwagent_deb-ubu
