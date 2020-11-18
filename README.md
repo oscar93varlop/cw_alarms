@@ -23,6 +23,16 @@ Creacion de Role en IAM 🔧
 Realizaremos la creacion del Role que le asignaremos al la instancia EC2 para que pueda enviar dichas metricas a CloudWatch
 link: https://www.loom.com/share/cde355b0e9304002be615d30b4587537
 
+Crear webhook de Slack 🔧 
+Crearemos el webhook el cual le permite a la funcion lambda escribir/enviar el mensaje a Slack 
+link : https://www.loom.com/share/b5434775e280458fbc45de65e5099bdb?sharedAppSource=personal_library
+
+Creacion de Funciones LAMBDA 🔧 
+Crearemos las dos funciones lambda la cuales nos llegara un mensaje de estado ok y alarm  a Slack 
+link : https://www.loom.com/share/e809b03f85ae4053b01f5e1c16917ba7?sharedAppSource=personal_library
+
+
+
 
 
 Dí cómo será ese paso
