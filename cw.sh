@@ -17,7 +17,7 @@ echo -e "
    echo "1. Instalación agente CW | creación de alarmas CPU/MEM/DISK dist deb   "
    echo "2. Instalación agente CW | creación de alarmas CPU/MEM/DISK dist rh   "
 
-opcion='^[1-2]{1}$'
+opcion=""
 read -n1 -p   "ingrese el tipo de file system que tiene su sistema \n 1 Dist deb \n Dist rh  [1-2]" opcion
 
 if [ $opcion -eq 1 ]; then
