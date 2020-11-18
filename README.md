@@ -1,21 +1,29 @@
 # Automatiacion Cloudwatch 
 en este repo quedara refelejado el proceso de instalacion y posible automatizacion de creacion de alarmas de CloudWatch
 
-Comenzando 🚀
-Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-Mira Deployment para conocer como desplegar el proyecto.
 
 Pre-requisitos 📋
 Tener una cuenta aws "ojala de uso personal"
+Tener permisos en slack para agregar apps
 crear un usuario IAM con FullAccessAdministrator y descargar el .csv
 Crear un role con los siguientes permisos :
+AmazonEC2RoleforSSM
+CloudWatchAgentAdminPolicy
+CloudWatchAgentServerPolicy
+
+Comenzando 🚀
+
+Estas instrucciones te permitirán obtenerlos prerequisitos para poder crear las alarmas basicas de Disk, mem y cpu.
+
+Creacion de usuario IAM 🔧 
+link : https://www.loom.com/share/cec0262c8bef4b2e8faf77c4034d9adf
+
+Creacion de Role en IAM 🔧 
+Realizaremos la creacion del Role que le asignaremos al la instancia EC2 para que pueda enviar dichas metricas a CloudWatch
+link: https://www.loom.com/share/cde355b0e9304002be615d30b4587537
 
 
-
-Da un ejemplo
-Instalación 🔧
-Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose
 
 Dí cómo será ese paso
 
@@ -42,9 +50,11 @@ Agrega notas adicionales sobre como hacer deploy
 Construido con 🛠️
 Menciona las herramientas que utilizaste para crear tu proyecto
 
-Dropwizard - El framework web usado
-Maven - Manejador de dependencias
-ROME - Usado para generar RSS
+Lambda - El framework web usado
+SNS - Manejador de dependencias
+EC2 - Usado para generar RSS
+SSM_ParameterStore- Manejador de dependencias
+CW - Usado para generar RSS
 Contribuyendo 🖇️
 Por favor lee el CONTRIBUTING.md para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
