@@ -18,7 +18,7 @@ echo -e "
    echo "2. Instalación agente CW | creación de alarmas CPU/MEM/DISK dist rh   "
 
 opcion=""
-read -n1 -p   "ingrese el tipo de file system que tiene su sistema \n 1 Dist deb \n Dist rh  [1-2]" opcion
+read -n1 -p   "ingrese el tipo de file system que tiene su sistema 1 Dist deb 2 Dist rh  [1-2]" opcion
 
 if [ $opcion -eq 1 ]; then
    echo "su fstype es una distribucion debian"
