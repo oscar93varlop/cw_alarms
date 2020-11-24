@@ -53,7 +53,7 @@ y descargaremos el programa a través de este repo
 
 con el siguiente código clonara el repo, ingresara a la carpeta y ejecutar el script 
 sudo apt install git && git clone https://github.com/oscar93varlop/cw_alarms.git && cd cw_alarms/ &&  sed -i 's/\r$//' cw.sh && sudo bash cw.sh
-
+* a tomar encuenta que este estos comandos se pueden agregar en el user data cuando se está creando la instancia ec2 y se deben agregar las variables al archivo para que el bash no se quede esperando que el usuario ingrese la información
 
 
 y debemos ingresar los siguientes 
