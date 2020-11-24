@@ -57,13 +57,13 @@ sudo apt install git && git clone https://github.com/oscar93varlop/cw_alarms.git
 
 
 y debemos ingresar los siguientes 
-* el tipo de distribucion linux al cual le vamos a instalar el agente de CW debian (1) /redHat (2)
+* el tipo de distribución linux al cual le vamos a instalar el agente de CW debian (1) /redHat (2)
 * Access key ID
 * Secret access key
 * la zona en la que se encuentra trabajando  en mi caso us-east-1 
 * el tipo de output /en mi caso solamente enter/
 * el nombre del parameter store que creamos anterior 
-* el nombre del proyecto o empresa de las que esas instancias pertenescan para este ejemplo coloque mi nombre 
+* el nombre del proyecto o empresa de las que esas instancias pertenezcan para este ejemplo coloque mi nombre 
 * el ARN del SNS de email
 * el ARN del SNS de cw_ok
 * el ARN del SNS de cw_alarm
