@@ -1,5 +1,5 @@
-# Automatiacion Cloudwatch 
-en este repo quedara refelejado el proceso de instalacion y posible automatizacion de creacion de alarmas de CloudWatch
+# Automatización Cloudwatch 
+en este repo quedara reflejado el proceso de instalacion y posible automatizacion de creación de alarmas de CloudWatch
 
 
 
@@ -14,13 +14,13 @@ CloudWatchAgentServerPolicy
 
 Comenzando 🚀
 
-Estas instrucciones te permitirán obtenerlos prerequisitos para poder crear las alarmas basicas de Disk, mem y cpu.
+Estas instrucciones te permitirán obtenerlos prerequisitos para poder crear las alarmas básicas de Disk, mem y cpu.
 
-Creacion de usuario IAM 🔧 
+Creación de usuario IAM 🔧 
 link : https://www.loom.com/share/cec0262c8bef4b2e8faf77c4034d9adf
 
-Creacion de Role en IAM 🔧 
-Realizaremos la creacion del Role que le asignaremos al la instancia EC2 para que pueda enviar dichas metricas a CloudWatch
+Creación de Role en IAM 🔧 
+Realizaremos la creación del Role que le asignaremos al la instancia EC2 para que pueda enviar dichas metricas a CloudWatch
 link: https://www.loom.com/share/cde355b0e9304002be615d30b4587537
 
 Crear webhook de Slack 🔧(crear en caso de contar con slack, de lo contrario puede omitir este paso ) 
@@ -45,23 +45,23 @@ Procedemos a crear una instancia EC2 en este caso utilize las AMI por defecto de
 en este proceso SOLO debemos atachar el rol creado a la instancia y debemos asignar unas tags con el Key=ENV, Value=XXXX generalmente el valor del ambiente depende de la empresa pero el estandar es QA/DEV/PROD
 Link: https://www.loom.com/share/a95619aa989b4c4f85dbf9cd5ac63317
 
-Ingreso y ejecucion del progroma ⚙️
-tener en cuenta que en la creacion de la EC2 debiamos abrir el puerto 22 
+Ingreso y ejecución del programa ⚙️
+tener en cuenta que en la creación de la EC2 debemos abrir el puerto 22 
 ingresamos en nuestro programa de preferencia (putty/termius/mobaXterm) a la ip publica 
-y descargaremos el programa a traves de este repo 
+y descargaremos el programa a través de este repo 
 
 
-con el siguiente codigo clonara el repo, ingresara a la carpeta y ejecutara el script 
+con el siguiente código clonara el repo, ingresara a la carpeta y ejecutar el script 
 sudo apt install git && git clone https://github.com/oscar93varlop/cw_alarms.git && cd cw_alarms/ &&  sed -i 's/\r$//' cw.sh && sudo bash cw.sh
 
 
 
 y debemos ingresar los siguientes 
-* el tipo de distribucion linux al cual le vamos a instalar el agente de CW debian/redHat
+* el tipo de distribucion linux al cual le vamos a instalar el agente de CW debian (1) /redHat (2)
 * Access key ID
 * Secret access key
 * la zona en la que se encuentra trabajando  en mi caso us-east-1 
-* el tipo de output /en mi caso solamente le di enter/
+* el tipo de output /en mi caso solamente enter/
 * el nombre del parameter store que creamos anterior 
 * el nombre del proyecto o empresa de las que esas instancias pertenescan para este ejemplo coloque mi nombre 
 * el ARN del SNS de email
@@ -69,37 +69,3 @@ y debemos ingresar los siguientes
 * el ARN del SNS de cw_alarm
 
 esperar de 5 a 10 min mientras se crean las alarmas y estan empiezan a reportar datos 5 min despues de creadas 
-
-Link : 
-
-
-
-Lambda - El framework web usado
-SNS - Manejador de dependencias
-EC2 - Usado para generar RSS
-SSM_ParameterStore- Manejador de dependencias
-CW - Usado para generar RSS
-Contribuyendo 🖇️
-Por favor lee el CONTRIBUTING.md para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-Wiki 📖
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra Wiki
-
-Versionado 📌
-Usamos SemVer para el versionado. Para todas las versiones disponibles, mira los tags en este repositorio.
-
-Autores ✒️
-Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
-
-Andrés Villanueva - Trabajo Inicial - villanuevand
-Fulanito Detal - Documentación - fulanitodetal
-También puedes mirar la lista de todos los contribuyentes quíenes han participado en este proyecto.
-
-Licencia 📄
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo LICENSE.md para detalles
-
-Expresiones de Gratitud 🎁
-Comenta a otros sobre este proyecto 📢
-Invita una cerveza 🍺 o un café ☕ a alguien del equipo.
-Da las gracias públicamente 🤓.
-etc.
