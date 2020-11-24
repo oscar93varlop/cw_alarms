@@ -20,14 +20,14 @@ opcion=""
 read -n1 -p   "ingrese el tipo de file system que tiene su sistema 1 Dist deb 2 Dist rh  [1-2]" opcion
 if [ $opcion -eq 1 ]; then
    echo "su fstype es una distribucion debian"
-   apt install unzip
+   sudo apt install unzip
    wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
-   sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
+   sudo sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
    device="xvda1"
    fstype="ext4"
 elif [ $opcion -eq 2 ]; then
    echo "u fstype es una distribucion rh"
-   yum install unzip
+   sudo yum install unzip
    wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
    sudo rpm -U ./amazon-cloudwatch-agent.rpm
     device="xvda1"
