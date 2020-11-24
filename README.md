@@ -50,13 +50,11 @@ tener en cuenta que en la creacion de la EC2 debiamos abrir el puerto 22
 ingresamos en nuestro programa de preferencia (putty/termius/mobaXterm) a la ip publica 
 y descargaremos el programa a traves de este repo 
 
-'git clone https://github.com/oscar93varlop/cw_alarms.git' (NO incluya las comillas sencillas)
-ingresamos a la carpeta 
-'cd cw_alarms'
-cambiamos permisos de ejecución
-'chmod +x cw.sh'
-y ejecutamos el script
-'./cw.sh'
+
+con el siguiente codigo clonara el repo, ingresara a la carpeta y ejecutara el script 
+sudo apt install git && git clone https://github.com/oscar93varlop/cw_alarms.git && cd cw_alarms/ &&  sed -i 's/\r$//' cw.sh && sudo bash cw.sh
+
+
 
 y debemos ingresar los siguientes 
 * el tipo de distribucion linux al cual le vamos a instalar el agente de CW debian/redHat
